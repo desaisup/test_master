@@ -1,0 +1,7 @@
+<h3 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"><div class="container">
+<p class="text-capitalize text-danger"> <%=@status%> </p>
+<p class="text-success"><%="PROJECT PATH : #{Rails.root}" %></p>
+<p class="text-warning"><%= "System IP address :" %><%= `ip route get 8.8.8.8 | awk '{print $NF; exit}'` %></p>
+</br>
+<%= link_to "Back",root_path,:class => 'btn btn btn-primary outline btns' %>&nbsp;
+</div>  </h3>

@@ -1,0 +1,11 @@
+<h3><div class="container">
+<h2>Cpu Utilization</h2>
+  <p class="text-capitalize text-danger"><%= "Total Memory of Cpu : " %> <%=@status %>B</p>
+  <p class="text-capitalize text-danger"><%= "Total Memory of Cpu Used: " %> <%=@status1%><%=%>GB </p>
+  <p class="text-capitalize text-danger"><%= "Total Memory of Cpu Free : " %> <%=@status2%><%=%>GB</p>
+   <p class="text-capitalize text-danger"><%= "Total Memory in used in percentage: " %> <%=@status3%><%="%"%></p>
+  <p class="text-success"><%#="PROJECT PATH : #{Rails.root}" %></p>
+  <p class="text-warning"><%= "System IP address :" %><%= `ip route get 8.8.8.8 | awk '{print $NF; exit}'` %></p>
+  </br>
+  <%= link_to "Back",root_path,:class => 'btn btn btn-primary outline btns' %>&nbsp;
+</div>  </h3>

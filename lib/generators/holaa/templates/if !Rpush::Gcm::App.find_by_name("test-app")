@@ -1,0 +1,13 @@
+	  if !Rpush::Gcm::App.find_by_name("test-app")
+		    app = Rpush::Gcm::App.new
+		    app.name = "test-app"
+		    app.auth_key = "AIzaSyBKmz8k_ARAxzNKSk_ULhDobTTLT314npA"
+		    app.connections = 1
+		    app.save!
+		  end
+
+		    n = Rpush::Gcm::Notification.new
+		  n.app = Rpush::Gcm::App.find_by_name("reseller-app")
+		  n.registration_ids = ["cTaQND1wHVE:APA91bFM2fmuiM0NgXsKdb5NMA15ZFZyq1p5AMI2zPRhdNX5uCVTkeF44FmvLJmZxJlqPa41_EHZPj_bhp55OjqCvhMB-Bm8Fv-dklYUej8V3NXOMCzVq80raNsFQmJne_kJGlzPojz9"]
+		  n.data = "notification.as_json"
+		  n.save!

@@ -1,0 +1,54 @@
+<h2 xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"><p><%#= @message %></p></h2>
+
+
+<%=notice%>
+
+<div class="container">
+  <h2> &nbsp;&nbsp;&nbsp;&nbsp;<%= "Background Services" %></h2>
+  </br>
+<h2><ul>
+  <li style="padding-bottom: 30px"> <span class="label label-default">Sidekiq</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "STATUS","/commands/sidekiq_status",:class => 'btn btn btn-primary outline btns'%>&nbsp;
+    <%= link_to "START","/commands/start_sidekiq",:class => 'btn btn btn-primary outline btns',:data => { :confirm => 'Are you sure?' } %>&nbsp;
+    <%= link_to "STOP","/commands/stop_sidekiq",:class => 'btn btn btn-primary outline btns'%>&nbsp;
+  </li>
+  <li style="padding-bottom: 30px"><span class="label label-primary"> Solr</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "STATUS","/commands/solr_status",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "START","/commands/start_solr",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "STOP","/commands/stop_solr",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "RESTART","/commands/restart_solr",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+  </li>
+  <li style="padding-bottom: 30px"><span class="label label-success">Redis</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "STATUS","/commands/redis_status",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "START","/commands/start_redis",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "STOP","/commands/stop_redis",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "RESTART","/commands/restart_redis",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+  </li>
+  <li style="padding-bottom: 30px"><span class="label label-info">Nginx</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "STATUS","/commands/nginx_status",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "START","/commands/start_nginx",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "STOP","/commands/stop_nginx",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "RESTART","/commands/restart_nginx",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+  </li>
+  <li style="padding-bottom: 30px"><span class="label label-warning">Passenger</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "STATUS","/commands/pass_status",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+    <%= link_to "RESTART","/commands/pass_restart",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+  </li>
+
+  <h2><%= "System Metrics"%></h2>
+  </br>
+
+  <li style="padding-bottom: 30px"><span class="label label-danger">CPU/RAM utilization</span>&nbsp;&nbsp;&nbsp;
+    <%= link_to "CHECK","/commands/cpu_consumed_mem",:class => 'btn btn btn-primary outline btns' %>&nbsp;
+  </li>
+  <li style="padding-bottom: 30px"><span class="label label-default">Free Memory</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "CHECK","/commands/free_memory",:class => 'btn btn btn-primary outline btns' %>
+  </li>
+   <li style="padding-bottom: 30px"><span class="label label-success">Detail Memory</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to "CHECK","/commands/detail_memory",:class => 'btn btn btn-primary outline btns'%>
+  </li>
+</ul></h2>
+</div>
+
+
+
